@@ -5,7 +5,6 @@ if(isset($_POST)) {
     $email=$_POST['email'];
     $password=$_POST['password'];
     $cpassword=$_POST['confirmpassword'];
-    
 
     $sql="SELECT * FROM shuka WHERE username='$username'";
     $result =mysqli_query($conn,$sql);
