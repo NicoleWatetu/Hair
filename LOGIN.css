@@ -24,7 +24,7 @@
 .row{
   width:  900px;
   height:550px;
-  border-radius: 10px;
+  border-radius: 15px;
   background: #fff;
   padding: 0px;
   box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.2);
@@ -59,6 +59,7 @@ i{
     font-weight: 700;
     text-align: center;
     margin-bottom: 45px;
+    margin-top: 50px;
 }
 .input-field{
     display: flex;
@@ -74,18 +75,19 @@ i{
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     outline: none;
     margin-bottom: 20px;
+    margin-top: 30px;
     color: #40414a;
 }
 .input-box .input-field label{
     position: absolute;
-    top: 10px;
+    top: 50px;
     left: 10px;
     pointer-events: none;
     transition: .5s;
 }
 .input-field input:focus ~ label
    {
-    top: -10px;
+    top: -50px;
     font-size: 13px;
   }
   .input-field input:valid ~ label
