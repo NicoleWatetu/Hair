@@ -12,9 +12,9 @@ if ($result) {
       // check if password match
     //get password hash from db
     $shuka = mysqli_fetch_assoc($result);
-    $password_hash = $shuka['password'];
+    $_databpassword= $shuka['password'];
     //password_verify ()-compares the hash password with the password the user has inputed
-    if (password_verify($password, $password_hash)) {
+    if($_databpassword == $password) {
      // echo"Login successful";
       //sessions-to store user data(in variables) across multiple pages
       session_start();//start user session
@@ -124,7 +124,7 @@ if ($result) {
                 <div class="input-box">
                    
                    <header>Log into account</header>
-                   <form method="home.html" action="POST" target="home.html">
+                   <form action="LOGIN.php" method="POST" target="about.html">
                    <div class="input-field">
                         <input type="text" class="input" id="email"name="email" required="" autocomplete="off">
                         <label for="email">Email</label> 

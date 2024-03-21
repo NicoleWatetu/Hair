@@ -128,7 +128,7 @@ if(isset($_POST['submit'])) {
         <!---start of form---->
         <div class="appointment-container">
             <h2>Signup</h2>
-            <form action="js/submit_booking" method="POST">
+            <form action="signup.php" method="POST">
               <label for="name">Enter Username:</label>
               <input type="text" id="name" name="name" required>
           
@@ -139,13 +139,13 @@ if(isset($_POST['submit'])) {
               <input type="password" id="password" name="password" required>
 
               <label for="confirmpassword">Confirm password:</label>
-              <input type="password" id="confirmpassword" name="confirmpassword" required>
+              <input type="password" id="cpass" name="confirmpassword" required>
 
 
 
 
 
-              <button type="submit"><a href="about.html">Submit</a></button>
+              <button type="submit">Submit</button>
             </form>
         </div>
         <div class="container-fluid copyright py-4">
