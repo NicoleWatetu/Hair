@@ -84,21 +84,21 @@ if ($result) {
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0">
                         <a href="about.html" class="nav-item nav-link">Home</a>
-                        <a href="signup.php" class="nav-item nav-link">Signup</a>
+                        <a href="index.php" class="nav-item nav-link">Signup</a>
                         <a href="LOGIN.php" class="nav-item nav-link">Login</a>
                         
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu m-0">
                                 <a href="appointment.html" class="dropdown-item">Appointment</a>
-                                <a href="feature.html" class="dropdown-item">Features</a>
+                                <a href="feature.html" class="dropdown-item">Hairstyles</a>
                                 
                                 <a href="testimonial.html" class="dropdown-item">Reviews</a>
                             </div>
                         </div>
                         <a href="contact.html" class="nav-item nav-link active">Contact Us</a>
                     </div>
-                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 flex-wrap flex-sm-shrink-0">Book Appointment</a>
+                    <a href="BookAppointment.html" class="btn btn-primary rounded-pill text-white py-2 px-4 flex-wrap flex-sm-shrink-0">Book Appointment</a>
                 </div>
             </nav>
         </div>
