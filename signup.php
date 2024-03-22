@@ -1,7 +1,13 @@
 <?php
+<<<<<<< HEAD
+include"connect.php";
+if(isset($_POST['submit'])) {
+    $username=$_POST['user'];
+=======
 include("connect.php");
 if(isset($_POST)) {
     $username=$_POST['name'];
+>>>>>>> 74ae08cf5a5265020949dd4a81ad5c928e99b506
     $email=$_POST['email'];
     $password=$_POST['password'];
     $cpassword=$_POST['confirmpassword'];
@@ -17,7 +23,11 @@ if(isset($_POST)) {
 if($count_user==0 && $count_email==0){ 
      if($password==$cpassword){
         $hash=password_hash($password,PASSWORD_DEFAULT);
+<<<<<<< HEAD
+        $sql="INSERT INTO shuka (username,email,password) VALUES ('$username', '$email', '$hash')";
+=======
         $sql="INSERT INTO shuka(username,email,password) VALUES ('$username', '$email', '$password')";
+>>>>>>> 74ae08cf5a5265020949dd4a81ad5c928e99b506
         $result=mysqli_query($conn,$sql);
         
          if($result){
