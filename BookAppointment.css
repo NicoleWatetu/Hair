@@ -27,11 +27,6 @@ label {
 
 input[type="text"],
 input[type="tel"],
-<<<<<<< HEAD
-=======
-input[type="email"],
-input[type="password"],
->>>>>>> 74ae08cf5a5265020949dd4a81ad5c928e99b506
 select,
 button {
   width: 100%;

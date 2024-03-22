@@ -34,5 +34,5 @@ if(isset($_POST)) {
         echo "Error: Username does not exist";
     }
 }
-var_dump($result);
+
 ?>
