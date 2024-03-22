@@ -1,7 +1,7 @@
 <?php
-include("connect.php");
+include"connect.php";
 if(isset($_POST['submit'])) {
-    $username=$_POST['username'];
+    $username=$_POST['user'];
     $email=$_POST['email'];
     $password=$_POST['password'];
     $cpassword=$_POST['cpass'];
@@ -18,7 +18,7 @@ if(isset($_POST['submit'])) {
    if($count_user==0 && $count_email==0){ 
     if($password==$cpassword){
         $hash=password_hash($password,PASSWORD_DEFAULT);
-        $sql="INSERT INTO shuka(username,email,password) VALUES ('$username', '$email', '$hash')";
+        $sql="INSERT INTO shuka (username,email,password) VALUES ('$username', '$email', '$hash')";
         $result=mysqli_query($conn,$sql);
         
 
