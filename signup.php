@@ -9,12 +9,10 @@ if(isset($_POST)) {
     $sql="SELECT * FROM shuka WHERE username='$username'";
     $result =mysqli_query($conn,$sql);
     $count_user=mysqli_num_rows($result);
-    var_dump($count_user);
-    echo('name');
     $mysql="SELECT * FROM shuka WHERE email='$email'";
     $myresult=mysqli_query($conn,$mysql);
     $count_email=mysqli_num_rows($myresult);
-echo'password';
+
 
 if($count_user==0 && $count_email==0){ 
      if($password==$cpassword){

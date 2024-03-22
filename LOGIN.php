@@ -98,7 +98,7 @@ if ($result) {
                         </div>
                         <a href="contact.html" class="nav-item nav-link active">Contact Us</a>
                     </div>
-                    <a href="BookAppointment.html" class="btn btn-primary rounded-pill text-white py-2 px-4 flex-wrap flex-sm-shrink-0">Book Appointment</a>
+                    <a href="BookAppointment.php" class="btn btn-primary rounded-pill text-white py-2 px-4 flex-wrap flex-sm-shrink-0">Book Appointment</a>
                 </div>
             </nav>
         </div>

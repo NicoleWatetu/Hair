@@ -1,3 +1,16 @@
+ <?php
+include("connect2.php");
+if(isset($_POST['submit'])) {
+  // Handle signup form submission
+  // Your signup logic here...
+
+  // Redirect to the home page after successful booking
+  header("Location:about.html ");
+  exit(); // Ensure script execution stops after redirection
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -79,21 +92,21 @@
                     <div class="navbar-nav ms-auto py-0">
                         
                         <a href="about.html" class="nav-item nav-link">Home</a>
-                        <a href="signup.html" class="nav-item nav-link">Signup</a>
-                        <a href="Login.html" class="nav-item nav-link">Login</a>
+                        <a href="index.php" class="nav-item nav-link">Signup</a>
+                        <a href="LOGIN.php" class="nav-item nav-link">Login</a>
                         
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu m-0">
                                 <a href="appointment.html" class="dropdown-item active">Appointment</a>
-                                <a href="feature.html" class="dropdown-item">Services</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonials</a>
+                                <a href="feature.html" class="dropdown-item">Hairstyles</a>
+                                <a href="testimonial.html" class="dropdown-item">Reviews</a>
                                
                             </div>
                         </div>
                         <a href="contact.html" class="nav-item nav-link">Contact Us</a>
                     </div>
-                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 flex-wrap flex-sm-shrink-0">Book Appointment</a>
+                    <a href="BookAppointment.php" class="btn btn-primary rounded-pill text-white py-2 px-4 flex-wrap flex-sm-shrink-0">Book Appointment</a>
                 </div>
             </nav>
         </div>
@@ -103,7 +116,7 @@
         <!-- Header Start -->
         <div class="container-fluid bg-breadcrumb">
             <div class="container text-center py-5" style="max-width: 900px;">
-                <h3 class="text-white display-3 mb-4 wow fadeInDown" ="0.1s"><a href="BookAppointment.html"></a>Book Appointment</h1>
+                <h3 class="text-white display-3 mb-4 wow fadeInDown" ="0.1s"><a href="BookAppointment.php"></a>Book Appointment</h1>
                 <ol class="breadcrumb justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                     <li class="breadcrumb-item"><a href="#">Pages</a></li>
@@ -115,15 +128,15 @@
         <!----start of form----->
         <div class="appointment-container">
             <h2>Book Appointment</h2>
-            <form action="js/submit_booking" method="POST">
+            <form action="booking.php" method="POST" target="about.html">
               <label for="name">Name:</label>
               <input type="text" id="name" name="name" required>
           
               <label for="phone">Phone Number:</label>
-              <input type="tel" id="phone" name="phone" required>
+              <input type="tel" id="phonenumber" name="phonenumber" required>
           
               <label for="hairstyle">Hairstyle:</label>
-              <select id="haircolor" name="haircolor" required>
+              <select id="hairstyle" name="hairstyle" required>
                 <option value="knotless">Knotless</option>
                 <option value="Goddess">Goddesslocs</option>
                 <option value="Fauxlocs">fauxlocs</option>
@@ -136,7 +149,8 @@
                 <option value="passiontwists">passion twists</option>
                 </select>
           
-             
+                <label for="haircolor">Haircolor:</label>
+              <input type="text" id="haircolor" name="haircolor" required>
           
               <label for="hairlength">Hair Length:</label>
               <select id="hairlength" name="hairlength" required>
@@ -148,9 +162,9 @@
               <label for="hairdresser">Hairdresser:</label>
               <select id="hairdresser" name="hairdresser" required>
                 <option value="Queen Nabagala">Queen Nabagala</option>
-                <option value="Mitch Kwaka">Mitch Kwaka</option>
-                <option value="Nicole Watetu">Nicole Watetu</option>
-                <option value="Noella Okhuya">Noella Okhuya</option>
+                <option value="Mapambo Kwaka">Mapambo Kwaka</option>
+                <option value="Patricia the stylist">Patricia the stylist</option>
+                <option value="Noella Pambo">Noella Pamba</option>
             </select>
           
               <label for="day">Day:</label>
@@ -185,7 +199,6 @@
         <!-- Back to Top -->
         <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
 
-        
         <!-- JavaScript Libraries -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -196,8 +209,10 @@
         
 
         <!-- Template Javascript -->
+        
         <script src="js/main.js"></script>
         
     </body>
+    
 
 </html>
